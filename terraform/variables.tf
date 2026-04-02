@@ -1,9 +1,10 @@
 # variables.tf
-variable "ami_id" {
-  description = "The AMI ID for the EC2 instance (Amazon Linux 2)"
-  type        = string
-  default     = null  
-}
+# variable "ami_id" {
+#   description = "The AMI ID for the EC2 instance (Amazon Linux 2)"
+#   type        = string
+#   default     = null
+# }
+
 
 variable "instance_type" {
   description = "The EC2 instance type"

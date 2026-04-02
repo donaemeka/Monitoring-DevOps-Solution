@@ -162,7 +162,7 @@ resource "aws_security_group" "monitor_sg" {
 
 # EC2 Instance 
 resource "aws_instance" "monitor_server" {
-  ami           = var.ami_id
+  ami           = data.aws_ami.amazon_linux_2.id  
   instance_type = var.instance_type
   key_name      = var.key_name
 
