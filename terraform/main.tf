@@ -240,5 +240,5 @@ output "subnet_id" {
 
 output "ssh_connection" {
   description = "SSH connection command"
-  value = "ssh -i odogwu1.pem ec2-user@${aws_eip.monitor_eip.public_ip}"
+  value = "ssh ec2-user@${aws_eip.monitor_eip.public_ip}"
 }
