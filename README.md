@@ -1,234 +1,182 @@
-# 🚀 The Monitor Project - DevOps Monitoring Stack
+# 🚀 The Monitor Project – DevOps Monitoring Stack
 
-A complete **DevOps monitoring solution** deployed on **AWS**, combining infrastructure provisioning, configuration management, containerization, and observability.
+## Overview
+A production-style monitoring solution deployed on AWS, combining infrastructure provisioning, configuration management, containerization, and observability.
 
-This project demonstrates how to build and manage a **production-like monitoring environment** using **Terraform, Ansible, Docker, and CI/CD pipelines**.
-
----
-
-## 📌 Project Overview
-
-The Monitor Project provides a **fully automated monitoring platform** where:
-
-- Infrastructure is provisioned using **Terraform**
-- Configuration is managed with **Ansible**
-- Applications run inside **Docker containers**
-- Metrics are collected and visualized using **Prometheus & Grafana**
-
-A sample **WordPress application** is included to simulate real-world monitoring.
+This project demonstrates how to build and operate a monitoring environment using Terraform, Ansible, Docker Compose, Prometheus, Grafana, and GitHub Actions.
 
 ---
 
-## 🎯 Problem It Solves
+## Key Highlights
+
+- Automated infrastructure provisioning using Terraform  
+- Configured servers using Ansible (agentless automation)  
+- Deployed monitoring stack with Docker Compose  
+- Integrated Prometheus and Grafana for observability  
+- Built CI/CD pipeline with GitHub Actions  
+- Simulated real-world workload using a WordPress application  
+
+---
+
+## Problem It Solves
 
 Modern systems require:
 
-- Real-time visibility into infrastructure and applications
-- Automated deployments and reproducible environments
-- Scalable and maintainable monitoring solutions
+- Real-time visibility into infrastructure and services  
+- Automated and repeatable deployments  
+- Reliable monitoring for faster troubleshooting  
+- Scalable and maintainable environments  
 
-This project demonstrates how to **design, deploy, and monitor a system using DevOps best practices**.
+This project demonstrates how DevOps practices can be used to provision, configure, deploy, and monitor a system in a production-like setup.
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 
 ![Architecture](./images/1-architecture-diagram.png)
 
-### 🔄 System Flow
+---
 
-GitHub Actions → Terraform → AWS EC2 → Ansible → Docker → Monitoring Stack → Users
+## System Flow
 
-### 🧱 Core Components
-
-- **CI/CD:** GitHub Actions
-- **Infrastructure:** Terraform (AWS EC2, VPC, Security Groups)
-- **Configuration:** Ansible
-- **Containerization:** Docker Compose
-- **Application:** WordPress + MySQL
-- **Monitoring:** Prometheus + Grafana
-- **Reverse Proxy:** Caddy
+GitHub Actions → Terraform → AWS EC2 → Ansible → Docker Compose → Prometheus & Grafana → Users
 
 ---
 
-## 🔧 Technology Stack
+## Core Components
 
-| Layer | Technology | Purpose |
-|------|------------|--------|
-| **CI/CD** | GitHub Actions | Automated deployment |
-| **Infrastructure** | Terraform (AWS) | Provision EC2, VPC, networking |
-| **Configuration** | Ansible | Server setup and automation |
-| **Containerization** | Docker Compose | Run services |
-| **Monitoring** | Prometheus + Grafana | Metrics & dashboards |
-| **Application** | WordPress + MySQL | Sample workload |
-| **Networking** | Caddy | Reverse proxy & routing |
+- CI/CD: GitHub Actions  
+- Infrastructure: Terraform (AWS EC2, VPC, Security Groups)  
+- Configuration: Ansible  
+- Containerization: Docker Compose  
+- Monitoring: Prometheus + Grafana  
+- Application: WordPress + MySQL  
+- Reverse Proxy: Caddy  
 
 ---
 
-## 📊 Key Achievements
+## Tech Stack
 
-- ✅ Automated infrastructure provisioning using **Terraform**
-- ✅ Configured servers using **Ansible (agentless automation)**
-- ✅ Deployed full monitoring stack with **Docker Compose**
-- ✅ Integrated **Prometheus & Grafana** for observability
-- ✅ Built CI/CD pipeline using **GitHub Actions**
-
----
-
-## 📸 Screenshots
-
-### Infrastructure
-
-![Terraform Plan](./images/2-terraform-plan-output.png)  
-![EC2 Instance](./images/5-ec2-instance-running.png)
-
-### CI/CD Pipeline
-
-![GitHub Actions](./images/04-github-actions-pipeline.png)
-
-### Application
-
-![Docker Containers](./images/6-docker-containers-active.png)  
-![WordPress](./images/08-wordpress-site-live.png)
-
-### Monitoring
-
-![Grafana](./images/07-grafana-dashboard.png)  
-![Prometheus](./images/09-prometheus-metrics.png)
+### Cloud & Infrastructure
+- AWS EC2, VPC, Security Groups  
+- Terraform  
 
 ### Configuration Management
+- Ansible  
 
-![Ansible Execution](./images/10-ansible-execution.png)
+### Containers
+- Docker  
+- Docker Compose  
 
----
+### Monitoring
+- Prometheus  
+- Grafana  
 
-## 🚀 Quick Start
+### CI/CD
+- GitHub Actions  
 
-### Prerequisites
-
-- AWS account
-- AWS CLI configured
-- Terraform
-- Ansible
-- SSH key pair
-
----
-
-### 1️⃣ Clone Repository
-
-git clone https://github.com/donaemeka/the-monitor-devops-project.git  
-cd the-monitor-devops-project
+### Application
+- WordPress  
+- MySQL  
 
 ---
 
-### 2️⃣ Provision Infrastructure
+## Key Achievements
 
-cd terraform  
-terraform init  
-terraform apply -auto-approve  
-
----
-
-### 3️⃣ Deploy Application
-
-export SERVER_IP=$(terraform output -raw public_ip)
-
-ansible-playbook -i "$SERVER_IP," ansible/playbook.yml \
---private-key=~/.ssh/yourkeypair.pem -u ec2-user
+- Provisioned AWS infrastructure automatically using Terraform  
+- Configured servers using Ansible for repeatable setup  
+- Deployed monitoring and application containers with Docker Compose  
+- Built dashboards for system visibility using Grafana  
+- Collected metrics with Prometheus  
+- Automated deployment workflow with GitHub Actions  
 
 ---
 
-## 🔁 CI/CD Pipeline
+## CI/CD Pipeline
 
 The pipeline automates:
 
-- Infrastructure provisioning with Terraform
-- Server configuration with Ansible
-- Application deployment with Docker Compose
-- Service verification and health checks
+- Infrastructure provisioning  
+- Server configuration  
+- Application deployment  
+- Service verification  
+
+![CI/CD Pipeline](./images/04-github-actions-pipeline.png)
 
 ---
 
-## 📊 Monitoring & Access
+## Monitoring
 
-| Service | URL | Credentials |
-|--------|-----|------------|
-| WordPress | http://<EC2-IP>/ | Setup on first login |
-| Grafana | http://<EC2-IP>:3000 | admin / admin123 |
-| Prometheus | http://<EC2-IP>:9090 | None |
-| Caddy Admin | http://<EC2-IP>:2019 | None |
+The monitoring stack provides visibility into system performance and services.
+
+![Grafana Dashboard](./images/07-grafana-dashboard.png)
 
 ---
 
-## ⚠️ Challenges & Solutions
+## Sample Application (WordPress)
+
+A WordPress application was deployed to simulate a real-world workload and validate the monitoring setup.
+
+![WordPress](./images/08-wordpress-site-live.png)
+
+---
+
+## Challenges & Solutions
 
 ### Terraform State Management
-
-- Problem: Local state not suitable for collaboration  
-- Solution: Implemented S3 backend with encryption  
+Problem: Local state not suitable for collaboration  
+Solution: Implemented S3 backend with encryption  
 
 ### CI/CD Reliability
-
-- Problem: Pipeline failures due to timing issues  
-- Solution: Added retries and health checks  
+Problem: Pipeline failures due to timing issues  
+Solution: Added retries and health checks  
 
 ### Docker Permissions
-
-- Problem: Non-root user could not run Docker  
-- Solution: Added user to Docker group via Ansible  
+Problem: Non-root user could not run Docker  
+Solution: Added user to Docker group via Ansible  
 
 ### Service Communication
-
-- Problem: Containers could not communicate  
-- Solution: Configured Docker network and service naming  
+Problem: Containers could not communicate  
+Solution: Configured Docker networking and service naming  
 
 ### Security Hardening
-
-- Problem: Excessive port exposure  
-- Solution: Applied least-privilege security rules  
-
----
-
-## 🎯 DevOps Skills Demonstrated
-
-| Category | Tools | Evidence |
-|----------|------|---------|
-| Infrastructure as Code | Terraform | AWS provisioning |
-| Configuration Management | Ansible | Automated setup |
-| Containerization | Docker | Multi-service deployment |
-| Monitoring | Prometheus, Grafana | Metrics dashboards |
-| CI/CD | GitHub Actions | Automated pipeline |
-| Cloud | AWS EC2, VPC | Production-like environment |
+Problem: Excessive port exposure  
+Solution: Applied least-privilege security rules  
 
 ---
 
-## 📈 Business Value
+## Business Value
 
-- Faster deployments  
-- Improved system visibility  
-- Better reliability  
+- Faster and more consistent deployments  
+- Improved visibility into services  
+- Better system reliability  
+- Reproducible infrastructure and configuration  
 - Scalable monitoring architecture  
 
 ---
 
-## 🚀 Future Improvements
+## Conclusion
 
-- HTTPS with SSL  
-- Alerts and notifications  
-- Multi-AZ deployment  
-- Kubernetes migration  
+This project demonstrates my ability to:
+
+- Provision cloud infrastructure with Terraform  
+- Configure systems using Ansible  
+- Deploy containerized services with Docker  
+- Build observability with Prometheus and Grafana  
+- Automate workflows with GitHub Actions  
+- Troubleshoot real-world system issues  
 
 ---
 
-## 👨‍💻 About Me
+## Author
 
-**Donatus Emeka Anyalebechi**  
-Junior DevOps Engineer  
+Donatus Emeka Anyalebechi  
+DevOps & Cloud Engineer  
 
-📍 Germany  
-📧 donaemeka92@gmail.com  
-🔗 https://www.linkedin.com/in/donatus-devops  
-🐙 https://github.com/donaemeka  
+Germany  
+donaemeka92@gmail.com  
+https://www.linkedin.com/in/donatus-devops  
+https://github.com/donaemeka  
 
 ---
 
