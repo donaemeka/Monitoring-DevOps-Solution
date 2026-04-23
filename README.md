@@ -9,12 +9,12 @@ This project demonstrates how to build and operate a monitoring environment usin
 
 ## Key Highlights
 
-- Automated infrastructure provisioning using Terraform  
-- Configured servers using Ansible (agentless automation)  
-- Deployed monitoring stack with Docker Compose  
-- Integrated Prometheus and Grafana for observability  
-- Built CI/CD pipeline with GitHub Actions  
-- Simulated real-world workload using a WordPress application  
+- Automated infrastructure provisioning using Terraform
+- Configured servers using Ansible (agentless automation)
+- Deployed a monitoring stack with Docker Compose
+- Integrated Prometheus and Grafana for observability
+- Built CI/CD pipeline with GitHub Actions
+- Simulated real-world workload using a WordPress application
 
 ---
 
@@ -22,10 +22,10 @@ This project demonstrates how to build and operate a monitoring environment usin
 
 Modern systems require:
 
-- Real-time visibility into infrastructure and services  
-- Automated and repeatable deployments  
-- Reliable monitoring for faster troubleshooting  
-- Scalable and maintainable environments  
+- Real-time visibility into infrastructure and services
+- Automated and repeatable deployments
+- Reliable monitoring for faster troubleshooting
+- Scalable and maintainable environments
 
 This project demonstrates how DevOps practices can be used to provision, configure, deploy, and monitor a system in a production-like setup.
 
@@ -45,50 +45,60 @@ GitHub Actions → Terraform → AWS EC2 → Ansible → Docker Compose → Prom
 
 ## Core Components
 
-- CI/CD: GitHub Actions  
-- Infrastructure: Terraform (AWS EC2, VPC, Security Groups)  
-- Configuration: Ansible  
-- Containerization: Docker Compose  
-- Monitoring: Prometheus + Grafana  
-- Application: WordPress + MySQL  
-- Reverse Proxy: Caddy  
+- CI/CD: GitHub Actions
+- Infrastructure: Terraform (AWS EC2, VPC, Security Groups)
+- Configuration: Ansible
+- Containerization: Docker Compose
+- Monitoring: Prometheus + Grafana
+- Application: WordPress + MySQL
+- Reverse Proxy: Caddy
 
 ---
 
 ## Tech Stack
 
 ### Cloud & Infrastructure
-- AWS EC2, VPC, Security Groups  
-- Terraform  
+- AWS EC2, VPC, Security Groups
+- Terraform
 
 ### Configuration Management
-- Ansible  
+- Ansible
 
 ### Containers
-- Docker  
-- Docker Compose  
+- Docker
+- Docker Compose
 
 ### Monitoring
-- Prometheus  
-- Grafana  
+- Prometheus
+- Grafana
 
 ### CI/CD
-- GitHub Actions  
+- GitHub Actions
 
 ### Application
-- WordPress  
-- MySQL  
+- WordPress
+- MySQL
+
+---
+
+## Measured Outcomes
+
+- Automated provisioning and configuration across infrastructure, server setup, and application deployment
+- Deployed and monitored a multi-service environment including WordPress, MySQL, Prometheus, Grafana, and Caddy
+- Added retries and health checks to improve CI/CD pipeline reliability
+- Applied least-privilege security rules to reduce unnecessary port exposure
+- Improved operational visibility through Grafana dashboards and Prometheus metrics collection
 
 ---
 
 ## Key Achievements
 
-- Provisioned AWS infrastructure automatically using Terraform  
-- Configured servers using Ansible for repeatable setup  
-- Deployed monitoring and application containers with Docker Compose  
-- Built dashboards for system visibility using Grafana  
-- Collected metrics with Prometheus  
-- Automated deployment workflow with GitHub Actions  
+- Provisioned AWS infrastructure automatically using Terraform
+- Configured servers using Ansible for repeatable setup
+- Deployed monitoring and application containers with Docker Compose
+- Built dashboards for system visibility using Grafana
+- Collected metrics with Prometheus
+- Automated deployment workflow with GitHub Actions
 
 ---
 
@@ -96,10 +106,10 @@ GitHub Actions → Terraform → AWS EC2 → Ansible → Docker Compose → Prom
 
 The pipeline automates:
 
-- Infrastructure provisioning  
-- Server configuration  
-- Application deployment  
-- Service verification  
+- Infrastructure provisioning
+- Server configuration
+- Application deployment
+- Service verification
 
 ![CI/CD Pipeline](./images/04-github-actions-pipeline.png)
 
@@ -125,33 +135,33 @@ A WordPress application was deployed to simulate a real-world workload and valid
 
 ### Terraform State Management
 Problem: Local state not suitable for collaboration  
-Solution: Implemented S3 backend with encryption  
+Solution: Implemented S3 backend with encryption
 
 ### CI/CD Reliability
 Problem: Pipeline failures due to timing issues  
-Solution: Added retries and health checks  
+Solution: Added retries and health checks
 
 ### Docker Permissions
 Problem: Non-root user could not run Docker  
-Solution: Added user to Docker group via Ansible  
+Solution: Added user to Docker group via Ansible
 
 ### Service Communication
 Problem: Containers could not communicate  
-Solution: Configured Docker networking and service naming  
+Solution: Configured Docker networking and service naming
 
 ### Security Hardening
 Problem: Excessive port exposure  
-Solution: Applied least-privilege security rules  
+Solution: Applied least-privilege security rules
 
 ---
 
 ## Business Value
 
-- Faster and more consistent deployments  
-- Improved visibility into services  
-- Better system reliability  
-- Reproducible infrastructure and configuration  
-- Scalable monitoring architecture  
+- Faster and more consistent deployments
+- Improved visibility into services
+- Better system reliability
+- Reproducible infrastructure and configuration
+- Scalable monitoring architecture
 
 ---
 
@@ -159,12 +169,12 @@ Solution: Applied least-privilege security rules
 
 This project demonstrates my ability to:
 
-- Provision cloud infrastructure with Terraform  
-- Configure systems using Ansible  
-- Deploy containerized services with Docker  
-- Build observability with Prometheus and Grafana  
-- Automate workflows with GitHub Actions  
-- Troubleshoot real-world system issues  
+- Provision cloud infrastructure with Terraform
+- Configure systems using Ansible
+- Deploy containerized services with Docker
+- Build observability with Prometheus and Grafana
+- Automate workflows with GitHub Actions
+- Troubleshoot real-world system issues
 
 ---
 
